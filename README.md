@@ -1,14 +1,14 @@
-Code Challenge Week 1 ~ Phase 1
-
- Description  
+**Code Challenge Week 1 ~ Phase 1**
+_
+ _Description  __
 In this program, we shall review things that are required as a prior condition for something to exist or for a function to be applied in the way it's commonly used.
 
- Getting Started 
+_ Getting Started_ 
 To apply the content reviewed, your computer should have the following software requirements:
 - It should be a Windows 7+, using Linux(Ubuntu) or MacOS or Windows Operating System
 - It should aslo be configured to nodejs 9.0+
 
-Installation
+_Installation_
 To acquire the contents of this repository on your machine you should:
 
 - Open the command line interface on your computer.
@@ -20,14 +20,14 @@ To acquire the contents of this repository on your machine you should:
     code .
 - Alternatively you can view the contents using an editor of your choice.
 
-Running the application
+_Running the application_
 To run the application follow the following steps:
 ~ Install npm:
     npm install
 ~Run application:
     npm start
 
-Authors
+_Authors_
 This program was contributed to by:
 @ Maureen Nyanamba
 
