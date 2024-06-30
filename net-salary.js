@@ -1,8 +1,6 @@
 //Function Net Salary
 function netSalary (basicSalary, benefits){
-    if (basicSalary >= 0 && benefits >= 0){
-        console.log ("");
-    }else (basicSalary <= 0 && benefits >= 0){
+    if (basicSalary <= 0 && benefits >= 0){
         console.log ("Input Value!")
     };
 
