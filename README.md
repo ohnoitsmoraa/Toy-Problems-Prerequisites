@@ -1,9 +1,9 @@
 **Code Challenge Week 1 ~ Phase 1**
-_
- _Description  __
+
+Description 
 In this program, we shall review things that are required as a prior condition for something to exist or for a function to be applied in the way it's commonly used.
 
-_ Getting Started_ 
+Getting Started
 To apply the content reviewed, your computer should have the following software requirements:
 - It should be a Windows 7+, using Linux(Ubuntu) or MacOS or Windows Operating System
 - It should aslo be configured to nodejs 9.0+
