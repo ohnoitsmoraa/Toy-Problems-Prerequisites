@@ -1,4 +1,4 @@
-Code Challenge Week 1 ~ Phase 1 
+Code Challenge Week 1 ~ Phase 1
 
  Description  
 In this program, we shall review things that are required as a prior condition for something to exist or for a function to be applied in the way it's commonly used.
