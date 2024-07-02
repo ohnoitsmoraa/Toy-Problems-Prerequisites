@@ -1,33 +1,21 @@
-// Terminal input
-const userInput = require("node:readline").createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-// Scoring of student marks
-const studMark = (marks) => {
-  if (marks > 79) {
+// Grading of student marks
+function studMark (marks){
+  if (marks < 0 || marks > 100 || isNaN(marks)){
+    return 'Invalid Entry';
+  }else if (marks > 79) {
     return "A";
-  } else if (marks >= 60 && marks <= 79) {
+  } else if (marks > 60) {
     return "B";
-  } else if (marks >= 50 && marks <= 59) {
+  } else if (marks > 49) {
     return "C";
-  } else if (marks >= 40 && marks <= 49) {
+  } else if (marks > 40) {
     return "D";
   } else {
     return "E";
   }
 };
 
-// Configuration of user input
-userInput.question("Student mark: ", (input) => {
-  const marks = Number(input);
+console.log(studMark(59));
 
-  if (marks) {
-    const grade = studMark(marks);
-    console.log(`Your grade is: ${grade}`);
-  } else {
-    console.log("false");
-    userInput.close();
-  }
-});
+// Prompt of user input
+let marks = prompt ("Enter students marks");
