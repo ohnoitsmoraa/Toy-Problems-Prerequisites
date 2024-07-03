@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Code Challenge Week 1 ~ Toy Problems Prerequisites
 
  ## Description  
@@ -17,6 +18,16 @@ In this program, we shall review properties required as a prior condition for so
 5. Ensure your repository has a well written README.
 
  ## System Requirements
+=======
+**Code Challenge Week 1 ~ Phase 1**
+
+Description 
+
+In this program, we shall review things that are required as a prior condition for something to exist or for a function to be applied in the way it's commonly used.
+
+Getting Started
+
+>>>>>>> 6793e795db2f3ff2bbe0e8f11bb4687eb4988336
 To apply the content reviewed, your computer should have the following software requirements:
 - It should be a Windows 7+, using Linux(Ubuntu) or MacOS Operating System
 - It should aslo be configured to nodejs 9.0+
@@ -24,7 +35,12 @@ To apply the content reviewed, your computer should have the following software 
 - Core i5+ processor
 - RAM 8GB+
 
+<<<<<<< HEAD
 ## Installation
+=======
+_Installation_
+
+>>>>>>> 6793e795db2f3ff2bbe0e8f11bb4687eb4988336
 To acquire the contents of this repository on your machine you should:
 
 - Open the command line interface on your computer.
@@ -39,7 +55,12 @@ To acquire the contents of this repository on your machine you should:
         code .
 - Alternatively you can view the contents using an editor of your choice.
 
+<<<<<<< HEAD
 ## Running the application
+=======
+_Running the application_
+
+>>>>>>> 6793e795db2f3ff2bbe0e8f11bb4687eb4988336
 To run the application follow the following steps:
 
 ~ Install npm:
@@ -48,9 +69,14 @@ To run the application follow the following steps:
 
 ~Run application:
 
+<<<<<<< HEAD
         npm start
 
 ### Authors
+=======
+_Authors_
+
+>>>>>>> 6793e795db2f3ff2bbe0e8f11bb4687eb4988336
 This program was contributed to by:
 
 - Maureen Nyanamba
