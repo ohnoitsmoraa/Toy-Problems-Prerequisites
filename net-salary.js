@@ -1,11 +1,7 @@
-//Function Net Salary
-function netSalary (basicSalary, benefits){
-    if (basicSalary <= 0 && benefits >= 0){
-        console.log ("Input Value!")
-    };
-
 // Gross Salary Calculation
+function calculateGrossSalary (basicSalary, benefits){
 const grossSalary = basicSalary + benefits;
+console.log(`Your gross salary is: `, grossSalary);
 };
 
 // PAYE
@@ -73,7 +69,7 @@ function nSSF (basicSalary) {
     let tier2Contribution = 0;
 
     if (basicSalary > tier1Limit){
-        tier2Contribution = Math,min(basicSalary - tier1Limit, tier2Limit - tier1Limit) * 0.06;
+        tier2Contribution = Math.min(basicSalary - tier1Limit, tier2Limit - tier1Limit) * 0.06;
     }
 
     // Total Contribution
