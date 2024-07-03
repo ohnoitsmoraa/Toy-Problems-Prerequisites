@@ -18,4 +18,4 @@ function studMark (marks){
 console.log(studMark(80));
 
 // Prompt of user input
-let marks = prompt ("Enter students marks");
+// let marks = prompt ("Enter students marks");

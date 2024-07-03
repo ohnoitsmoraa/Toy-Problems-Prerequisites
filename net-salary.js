@@ -1,90 +1,95 @@
-// Gross Salary Calculation
-function calculateGrossSalary (basicSalary, benefits){
-const grossSalary = basicSalary + benefits;
-console.log(`Your gross salary is: `, grossSalary);
-};
+// Gross Salary
+function netSalary(basicSalary, benefits) {
+    const grossSalary = basicSalary + benefits;
 
-// PAYE
-function payAsYouEarn(){
-    if (monthlyTaxable <= 24000){
-        return monthlyTaxable * 0.1;
-    }else if (monthlyTaxable >= 24000 && monthlyTaxable <= 32333){
-        return monthlyTaxable * 0.25;
-    }else if (monthlyTaxable >= 32333 && monthlyTaxable <= 500000){
-        return monthlyTaxable * 0.3;
-    }else if (monthlyTaxable >= 500000 && monthlyTaxable <= 800000){
-        return monthlyTaxable * 0.325;
-    }else {
-        return monthlyTaxable * 0.35;
+    console.log(`Your gross salary is:`, grossSalary);
+
+    // PAYE Calculation
+    function payAsYouEarn(){
+        let grossSalaryMinusPAYE;
+
+        if (grossSalary <= 24000){
+            grossSalaryMinusPAYE = grossSalary * 0.1;
+        }else if (grossSalary > 24000 && grossSalary < 32333){
+            grossSalaryMinusPAYE = grossSalary * 0.25;
+        }else if (grossSalary > 32333 && grossSalary < 500000){
+            grossSalaryMinusPAYE = grossSalary * 0.3;
+        }else if (grossSalary > 500000 && grossSalary < 800000){
+            grossSalaryMinusPAYE = grossSalary * 0.325;
+        }else {
+            grossSalaryMinusPAYE = grossSalary * 0.35;
+        }
+
+        console.log(`Your gross salary minus PAYE: `, grossSalaryMinusPAYE);
+
+        // NHIF Deductions
+        function nHIFDeductions (){
+            let salaryMinusNHIF;
+
+            if (grossSalary <= 5999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 150;
+            }else if (grossSalary <= 7999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 300;
+            }else if(grossSalary <= 11999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 400;
+            }else if(grossSalary <= 14999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 500;
+            }else if(grossSalary <= 19999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 600;
+            }else if (grossSalary <= 24999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 750;
+            }else if (grossSalary <= 29999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 850;
+            }else if (grossSalary <= 34999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 900;
+            }else if (grossSalary <= 39999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 950;
+            }else if (grossSalary <= 44999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1000;
+            }else if (grossSalary <= 49999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1100;
+            }else if (grossSalary <= 59999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1200;
+            }else if (grossSalary <= 69999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1300;
+            }else if (grossSalary <= 79999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1400;
+            }else if (grossSalary <= 89999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1500;
+            }else if (grossSalary <= 99999){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1600;
+            }else if (grossSalary >= 100000){
+                salaryMinusNHIF = grossSalaryMinusPAYE - 1700;
+            }else {
+                salaryMinusNHIF = "Invalid Value";
+            }
+
+            console.log (`Your gross salary minus NHIF: `,salaryMinusNHIF);
+
+            // NSSF Deductions
+            function nSSFDeduction (){
+                const tier1Limit = 7000;
+                const tier2Limit = 36000;
+                const tier1Rate = 0.06;
+
+                let tier1Contribution = (basicSalary * tier1Rate, tier1Limit);
+
+                let tier2Contribution = 0;
+                if (basicSalary > tier1Limit){
+                    tier2Contribution = Math.min(basicSalary - tier1Limit * tier1Rate, tier2Limit);
+                }
+
+                // Total NSSF contribution
+                let nSSFContribution = tier1Contribution + tier2Contribution;
+                netSalary = salaryMinusNHIF - nSSFContribution;
+                console.log( `Your net salary is: `, netSalary)
+                return netSalary;
+            }
+            nSSFDeduction();
+        }
+        nHIFDeductions();
     }
-};
+    payAsYouEarn();
+}
+console.log (netSalary(150000, 20000));
 
-// NHIF Deductions
-function nHIFDeductions (grossPay) {
-    if (grossPay >= 0 && grossPay <= 5999){
-        return 150;
-    }else if (grossPay >= 6000 && grossPay <= 7999){
-        return 300;
-    }else if (grossPay >= 8000 && grossPay <= 11999){
-        return 400;
-    }else if (grossPay >= 12000 && grossPay <= 14999){
-        return 500;
-    }else if (grossPay >= 15000 && grossPay <= 19999){
-        return 600;
-    }else if (grossPay >= 20000 && grossPay <= 24999){
-        return 750;
-    }else if (grossPay >= 25000 && grossPay <= 29999){
-        return 850;
-    }else if (grossPay >= 30000 && grossPay <= 34999){
-        return 900;
-    }else if (grossPay >= 35000 && grossPay <= 39999){
-        return 950;
-    }else if (grossPay >= 40000 && grossPay <= 44999){
-        return 1000;
-    }else if (grossPay >= 45000 && grossPay <= 49999){
-        return 1100;
-    }else if (grossPay >= 50000 && grossPay <= 59999){
-        return 1200;
-    }else if (grossPay >= 60000 && grossPay <= 69999){
-        return 1300;
-    }else if (grossPay >= 70000 && grossPay <= 79999){
-        return 1400;
-    }else if (grossPay >= 80000 && grossPay <= 89999){
-        return 1500;
-    }else if (grossPay >= 90000 && grossPay <= 99999){
-        return 1600;
-    }else if (grossPay >= 100000){
-        return 1700;
-    }else {
-        return "Invalid Value";
-    }
-};
-
-// NSSF Deductions
-function nSSF (basicSalary) {
-    const tier1Limit = 7000;
-    const tier2Limit = 36000;
-
-    let tier1Contribution = Math.min(basicSalary, tier1Limit) * 0.06;
-    let tier2Contribution = 0;
-
-    if (basicSalary > tier1Limit){
-        tier2Contribution = Math.min(basicSalary - tier1Limit, tier2Limit - tier1Limit) * 0.06;
-    }
-
-    // Total Contribution
-    let employeeContribution = tier1Contribution + tier2Contribution;
-    let employerContribution = tier1Contribution + tier2Contribution;
-
-    return employeeContribution + employerContribution;
-};
-
-// Net Salary
-function  netSalary (basicSalary, benefits){
-const grossSalary = basicSalary + benefits;
-const nSSFDeduction = nSSF(grossSalary);
-const nHIFDeductions = nHIFDeductions(grossSalary);
-const pAYE = payAsYouEarn(grossSalary);
-const netSalary = grossSalary - nSSFDeduction - nHIFDeductions - pAYE;
-return netSalary;
-};
