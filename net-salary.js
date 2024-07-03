@@ -10,11 +10,11 @@ function netSalary(basicSalary, benefits) {
 
         if (grossSalary <= 24000){
             grossSalaryMinusPAYE = grossSalary * 0.1;
-        }else if (grossSalary > 24000 && grossSalary < 32333){
+        }else if (grossSalary <= 32333){
             grossSalaryMinusPAYE = grossSalary * 0.25;
-        }else if (grossSalary > 32333 && grossSalary < 500000){
+        }else if (grossSalary <= 500000){
             grossSalaryMinusPAYE = grossSalary * 0.3;
-        }else if (grossSalary > 500000 && grossSalary < 800000){
+        }else if (grossSalary <= 800000){
             grossSalaryMinusPAYE = grossSalary * 0.325;
         }else {
             grossSalaryMinusPAYE = grossSalary * 0.35;
